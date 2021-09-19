@@ -1,5 +1,5 @@
 
-postgres=# CREATE USER MIGTESTUSER with encrypted password 'Uc@@s123';
+postgres=# CREATE USER MIGTESTUSER with encrypted password '*******';
 CREATE ROLE
 postgres=# GRANT ALL PRIVILEGES ON DATABASE MIGTEST1 TO MIGTESTUSER
 postgres-# psql MIGTEST1
