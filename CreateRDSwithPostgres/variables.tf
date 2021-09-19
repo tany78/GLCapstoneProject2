@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "db_password" {
-  default     = "hashicorp"
+  default     = "<********>"
   description = "RDS root user password"
   sensitive   = true
 }
