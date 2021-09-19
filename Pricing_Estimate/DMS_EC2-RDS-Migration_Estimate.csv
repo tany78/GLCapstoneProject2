@@ -1,0 +1,10 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon EC2,0,21.79,261.48,USD,"Operating system (Linux), Quantity (1), Pricing strategy (On-Demand Instances), Storage amount (50 GB), Instance type (t2.small)"
+My Estimate,US East (N. Virginia),,Amazon EC2,0,83.87,1006.44,USD,"Operating system (Linux), Quantity (1), Pricing strategy (On-Demand Instances), Storage amount (500 GB), Instance type (t2.medium)"
+My Estimate,US East (N. Virginia),,Amazon RDS for PostgreSQL,0,264.85,3178.20,USD,"Storage volume (General Purpose SSD (gp2)), Storage amount (500 GB per month), Nodes (1), Instance Type (db.m1.large), Deployment Option (Single-AZ), Pricing Model (OnDemand), Additional backup storage (300 GB)"
+My Estimate,US East (N. Virginia),,AWS Database Migration Service,0,461.91,5542.92,USD,"Storage for each database migration instance (General Purpose SSD (gp2)), Storage amount (single AZ) (100 GB), Number of instances (1), Instance type (c4.2xlarge), Deployment option (Single)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
