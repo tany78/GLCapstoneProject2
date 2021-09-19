@@ -1,0 +1,56 @@
+
+postgres=# CREATE USER MIGTESTUSER with encrypted password 'Uc@@s123';
+CREATE ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE MIGTEST1 TO MIGTESTUSER
+postgres-# psql MIGTEST1
+postgres-# MIGTEST1
+postgres-# CREATE TABLE products (
+postgres(#     product_no integer,
+postgres(#     name text,
+postgres(#     price numeric
+postgres(# );
+ERROR:  syntax error at or near "psql"
+LINE 2: psql MIGTEST1
+        ^
+postgres=# CREATE TABLE products (
+postgres(#     product_no integer,
+postgres(#     name text,
+postgres(#     price numeric
+postgres(# );
+CREATE TABLE
+postgres=# INSERT INTO products (name, price, product_no) VALUES ('Cheese', 9.99, 1);
+INSERT 0 1
+postgres=# \d
+          List of relations
+ Schema |   Name   | Type  |  Owner
+--------+----------+-------+----------
+ public | products | table | postgres
+(1 row)
+
+postgres=# INSERT INTO products (product_no, name, price) VALUES
+postgres-#     (1, 'Cheese', 9.99),
+postgres-#     (2, 'Bread', 1.99),
+postgres-#     (3, 'Milk', 2.99);
+INSERT 0 3
+postgres=# TABLE products;
+ product_no |  name  | price
+------------+--------+-------
+          1 | Cheese |  9.99
+          1 | Cheese |  9.99
+          2 | Bread  |  1.99
+          3 | Milk   |  2.99
+(4 rows)
+
+postgres=# SELECT * FROM mytablename;
+ERROR:  relation "mytablename" does not exist
+LINE 1: SELECT * FROM mytablename;
+                      ^
+postgres=# SELECT * FROM products;
+ product_no |  name  | price
+------------+--------+-------
+          1 | Cheese |  9.99
+          1 | Cheese |  9.99
+          2 | Bread  |  1.99
+          3 | Milk   |  2.99
+(4 rows)
+
